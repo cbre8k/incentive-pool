@@ -88,7 +88,7 @@ contract IncentivePool is Context, IERC721Receiver, IERC1155Receiver {
         require(!isClaimed(sender), "already claimed");
         bytes32 leaf;
 
-        if (value_ == 0) {
+        if (data_.length == 0) {
             leaf = keccak256(abi.encodePacked(sender, ":", value_.toString()));
         } else {
             leaf = keccak256(abi.encodePacked(sender, ":", data_));
