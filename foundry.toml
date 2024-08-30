@@ -1,0 +1,43 @@
+
+# Full reference https://github.com/foundry-rs/foundry/tree/master/crates/config
+
+[profile.default]
+script = "script"
+solc = "0.8.26"
+src = "src"
+test = "test"
+libs = ["dependencies"]
+
+[dependencies]
+forge-std = { version = "1.9.1", url = "https://github.com/foundry-rs/forge-std/archive/refs/tags/v1.9.1.zip" }
+foundry-kit = { version = "1.0.0", url = "https://github.com/cgccld/foundry-kit/archive/refs/tags/v.1.0.0.zip" }
+"@openzeppelin-contracts" = "5.0.2"
+"@openzeppelin-contracts-upgradeable" = "5.0.2"
+
+[etherscan]
+# testnet
+goerli = { key = "${ETHERSCAN_KEY}", url = "https://api-goerli.etherscan.io/api" }
+tbsc = { key = "${BSCSCAN_KEY}", url = "https://api-testnet.bscscan.com/api" }
+fuji = { key = "${SNOWTRACE_KEY}", url = "https://api-testnet.snowtrace.io/api" }
+mumbai = { key = "${POLYGONSCAN_KEY}", url = "https://api-testnet.polygonscan.com/api" }
+tarb = { key = "${ARBISCAN_KEY}", url = "https://api-goerli.arbiscan.io/api" }
+# mainnet
+ethereum = { key = "${ETHERSCAN_KEY}" }
+bsc = { key = "${BSCSCAN_KEY}", url = "https://api.bscscan.com/api" }
+avalanche = { key = "${SNOWTRACE_KEY}", url = "https://api.snowtrace.io/api" }
+polygon = { key = "${POLYGONSCAN_KEY}", url = "https://api.polygonscan.com/api" }
+arbitrum = { key = "${ARBISCAN_KEY}", url = "https://api.arbiscan.io/api" }
+
+[rpc_endpoints]
+# testnet rpc endpoints
+goerli = "${RPC_URL_GOERLI}"
+tbsc = "${RPC_URL_TBSC}"
+fuji = "${RPC_URL_FUJI}"
+mumbai = "${RPC_URL_MUMBAI}"
+tarb = "${RPC_URL_TARB}"
+# mainnet rpc endpoints
+ethereum = "${RPC_URL_ETHER}"
+bsc = "${RPC_URL_BSC}"
+avalanche = "${RPC_URL_AVALANCHE}"
+polygon = "${RPC_URL_POLYGON}"
+arbitrum = "${RPC_URL_ARBITRUM}"
