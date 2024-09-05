@@ -4,7 +4,7 @@ pragma solidity 0.8.26;
 import {Context} from "@openzeppelin-contracts-5.0.2/utils/Context.sol";
 import {Reward, IncentivePool} from "./IncentivePool.sol";
 
-contract IncentivePoolFactory is Context {
+contract IncentiveFactory is Context {
     event PoolCreated(address owner, address pool);
 
     function createPoolIncentive(
